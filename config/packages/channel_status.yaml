@@ -1,0 +1,6 @@
+# config/packages/channel_status.yaml
+parameters:
+    enable_sms: true
+    enable_email: false
+    enable_push: false
+

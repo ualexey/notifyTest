@@ -5,11 +5,11 @@ namespace App\Infrastructure\Notification\Adapter;
 use App\Domain\Command\NotificationCommand;
 use App\Domain\Notification\NotificationAdapterInterface;
 
-class AnotherEmailProviderAdapter implements NotificationAdapterInterface
+class PushyPushProviderAdapter implements NotificationAdapterInterface
 {
     public function sendNotification(NotificationCommand $command): bool
     {
-        // Implementation to send Email using another provider
+        // Implementation to send Push
         return true;
     }
 }
