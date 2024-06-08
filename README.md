@@ -10,14 +10,19 @@ with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) 
 
 This is a RESTful API for sending and retrieving notifications.
 
-## Before Start
-1. Clone repository into your IDE.
-2. Install all necessary packages
-`php composer install`
-3. Run migration command to create DB tables
-`php bin/console doctrine:migrations:migrate`
-4. Run tests
-`php vendor/bin/phpunit`
+## Getting Started
+1. If not already done, [install Docker Compose](https://docs.docker.com/compose/install/) (v2.10+)
+2. Run `docker compose build --no-cache` to build fresh images
+3. Run `docker compose up --pull always -d --wait` to set up and start a fresh Symfony project
+4. Open `https://localhost` in your favorite web browser and [accept the auto-generated TLS certificate](https://stackoverflow.com/a/15076602/1352334)
+5. Install all necessary packages
+`composer install`
+6. Run migration command to create DB tables
+`bin/console doctrine:migrations:migrate`
+7. Run tests
+`vendor/bin/phpunit`
+
+To stop the Docker containers run `docker compose down --remove-orphans`.
 
 ## Endpoints
 
@@ -129,13 +134,7 @@ class.
    `config/services.yaml` file.
 
 
-## Getting Started
 
-1. If not already done, [install Docker Compose](https://docs.docker.com/compose/install/) (v2.10+)
-2. Run `docker compose build --no-cache` to build fresh images
-3. Run `docker compose up --pull always -d --wait` to set up and start a fresh Symfony project
-4. Open `https://localhost` in your favorite web browser and [accept the auto-generated TLS certificate](https://stackoverflow.com/a/15076602/1352334)
-5. Run `docker compose down --remove-orphans` to stop the Docker containers.
 
 ## Features
 
